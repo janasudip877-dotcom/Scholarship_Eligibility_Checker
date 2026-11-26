@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f6f7f2">
+    <meta name="description" content="A clear, thoughtful way to review scholarship eligibility and student merit.">
+    <title>EduGrant — Scholarship Eligibility</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div id="landing-hero" class="landing-page">
+        <header class="site-header">
+            <a class="brand" href="#" aria-label="EduGrant home">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none">
+                        <path d="M5 12.5 16 6l11 6.5L16 19 5 12.5Z" fill="currentColor"/>
+                        <path d="M9 15v6c4.3 3.2 9.7 3.2 14 0v-6l-7 4-7-4Z" fill="currentColor" opacity=".72"/>
+                        <path d="M27 13v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <span class="brand-name">edugrant<span>.</span></span>
+            </a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="#how-it-works">How it works</a>
+                <a href="#benefits">Why EduGrant</a>
+            </nav>
+            <div class="header-actions">
+                <span class="header-status"><i></i> Scholarship screening, simplified</span>
+                <button class="button button-dark button-small" onclick="openScreeningDashboard()">
+                    Open workspace <span aria-hidden="true">↗</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-wrap">
+                <div class="hero-copy">
+                    <div class="eyebrow"><span class="eyebrow-line"></span> A fairer way forward</div>
+                    <h1>Make room for<br>great <em>potential.</em></h1>
+                    <p class="hero-description">A thoughtful, transparent way to understand scholarship eligibility. Bring every student's story into focus—with clear criteria and instant results.</p>
+                    <div class="hero-actions">
+                        <button class="button button-primary" onclick="openScreeningDashboard()">
+                            Check eligibility <span class="button-arrow" aria-hidden="true">↗</span>
+                        </button>
+                        <a class="text-link" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
+                    </div>
+                    <div class="hero-proof">
+                        <div class="avatar-stack" aria-hidden="true">
+                            <span>R</span><span>S</span><span>A</span><span>+</span>
+                        </div>
+                        <p><strong>Every application matters.</strong><br>One clear decision at a time.</p>
+                    </div>
+                </div>
+
+                <div class="hero-art" aria-label="Illustration of scholarship review progress">
+                    <div class="art-orbit orbit-one"></div>
+                    <div class="art-orbit orbit-two"></div>
+                    <div class="art-sun"></div>
+                    <div class="art-label label-top"><span class="label-icon">✳</span> Merit, made visible</div>
+                    <div class="art-card art-card-main">
+                        <div class="art-card-head">
+                            <div>
+                                <span class="art-kicker">STUDENT PROFILE</span>
+                                <strong>Opportunity starts here</strong>
+                            </div>
+                            <span class="card-menu">•••</span>
+                        </div>
+                        <div class="profile-row">
+                            <span class="profile-avatar">S</span>
+                            <span><strong>Student success</strong><small>Academic year 2025–26</small></span>
+                            <span class="profile-check">✓</span>
+                        </div>
+                        <div class="progress-label"><span>Eligibility profile</span><strong>82%</strong></div>
+                        <div class="progress-track"><span></span></div>
+                        <div class="art-card-foot"><span>Academic merit</span><span>Strong profile <b>↗</b></span></div>
+                    </div>
+                    <div class="art-card art-card-note">
+                        <span class="note-icon">✓</span>
+                        <span><strong>Clear criteria</strong><small>Every result explained</small></span>
+                    </div>
+                    <div class="art-stamp">POTENTIAL<br>HAS NO<br>SHORTCUT.</div>
+                    <div class="art-label label-bottom"><span class="sparkle">✦</span> A little clarity goes a long way</div>
+                </div>
+            </section>
+
+            <section class="benefit-strip" id="benefits" aria-label="Platform benefits">
+                <div class="benefit-item"><span class="benefit-icon">01</span><span><strong>Simple by design</strong><small>Everything you need, nothing you don't.</small></span></div>
+                <div class="benefit-item"><span class="benefit-icon">02</span><span><strong>Transparent decisions</strong><small>Know exactly how each result is reached.</small></span></div>
+                <div class="benefit-item"><span class="benefit-icon">03</span><span><strong>Built for every student</strong><small>Consistent criteria, considered fairly.</small></span></div>
+            </section>
+
+            <section class="how-section" id="how-it-works">
+                <div>
+                    <div class="eyebrow"><span class="eyebrow-line"></span> How it works</div>
+                    <h2>From student details<br>to a clearer picture.</h2>
+                </div>
+                <div class="steps-list">
+                    <div class="step-item"><span>01</span><p><strong>Enter the essentials</strong><small>Add academic and household details.</small></p></div>
+                    <div class="step-item"><span>02</span><p><strong>Review the criteria</strong><small>See how each requirement is evaluated.</small></p></div>
+                    <div class="step-item"><span>03</span><p><strong>Understand the result</strong><small>Get a clear status and merit score.</small></p></div>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer"><a class="brand" href="#"><span class="brand-mark small-mark">✳</span><span class="brand-name">edugrant<span>.</span></span></a><span>Clarity creates opportunity.</span><span id="live-clock"></span></footer>
+    </div>
+
+    <div id="screener-core" class="workspace hidden">
+        <header class="workspace-header">
+            <a class="brand" href="#" onclick="closeScreeningDashboard(); return false;" aria-label="Return to EduGrant home">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none">
+                        <path d="M5 12.5 16 6l11 6.5L16 19 5 12.5Z" fill="currentColor"/>
+                        <path d="M9 15v6c4.3 3.2 9.7 3.2 14 0v-6l-7 4-7-4Z" fill="currentColor" opacity=".72"/>
+                        <path d="M27 13v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <span class="brand-name">edugrant<span>.</span></span>
+            </a>
+            <div class="workspace-center"><span class="workspace-dot"></span> Scholarship review workspace</div>
+            <button class="workspace-home" onclick="closeScreeningDashboard()"><span aria-hidden="true">←</span> Back to home</button>
+        </header>
+
+        <main class="workspace-main">
+            <section class="workspace-intro">
+                <div>
+                    <div class="eyebrow"><span class="eyebrow-line"></span> YOUR REVIEW DESK</div>
+                    <h1>A little clarity.<br><em>A lot of possibility.</em></h1>
+                    <p>Review student applications against consistent, transparent criteria.</p>
+                </div>
+                <div class="review-date"><span class="date-icon">✳</span><span><small>LOCAL TIME</small><strong id="workspace-clock">Scholarship review</strong></span></div>
+            </section>
+
+            <section class="metric-grid" aria-label="Registry overview">
+                <article class="metric-card"><span class="metric-label">Students reviewed <span>↗</span></span><strong id="total-students">—</strong><small>In the current registry</small><i class="metric-accent accent-sage"></i></article>
+                <article class="metric-card"><span class="metric-label">Eligible <span>✳</span></span><strong id="eligible-count">—</strong><small>Meeting core requirements</small><i class="metric-accent accent-gold"></i></article>
+                <article class="metric-card"><span class="metric-label">High merit <span>↗</span></span><strong id="high-merit-count">—</strong><small>Strong academic profiles</small><i class="metric-accent accent-blue"></i></article>
+                <article class="metric-card metric-note"><span class="metric-note-icon">✦</span><span><strong>Fairness starts with clarity.</strong><small>Every application is assessed against the same criteria.</small></span></article>
+            </section>
+
+            <section class="workspace-grid">
+                <article class="panel application-panel">
+                    <div class="panel-heading">
+                        <div><span class="panel-kicker">NEW APPLICATION</span><h2>Student details</h2><p>Enter the applicant's information to begin the review.</p></div>
+                        <span class="step-count">01 <i>/</i> 01</span>
+                    </div>
+                    <form id="screening-form" method="post" action="/">
+                        <div class="form-section-label"><span class="form-section-number">A</span><span>About the student</span><i></i></div>
+                        <div class="input-row">
+                            <div class="field-group">
+                                <label for="student_id">Student ID <span>*</span></label>
+                                <input type="text" id="student_id" name="student_id" placeholder="e.g. AUBC24003" autocomplete="off" required>
+                            </div>
+                            <div class="field-group">
+                                <label for="name">Full name <span>*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Student's full name" autocomplete="name" required>
+                            </div>
+                        </div>
+                        <div class="input-row triple">
+                            <div class="field-group">
+                                <label for="programme">Programme <span>*</span></label>
+                                <input type="text" id="programme" name="programme" value="B.C.A" required>
+                            </div>
+                            <div class="field-group">
+                                <label for="semester">Semester <span>*</span></label>
+                                <select id="semester" name="semester" required>
+                                    <option value="1">Semester 1</option><option value="2">Semester 2</option><option value="3">Semester 3</option><option value="4" selected>Semester 4</option>
+                                    <option value="5">Semester 5</option><option value="6">Semester 6</option><option value="7">Semester 7</option><option value="8">Semester 8</option>
+                                </select>
+                            </div>
+                            <div class="field-group">
+                                <label for="enrollment">Enrollment <span>*</span></label>
+                                <select id="enrollment" name="enrollment" required><option value="Active">Active</option><option value="Inactive">Inactive</option></select>
+                            </div>
+                        </div>
+
+                        <div class="form-section-label form-section-spaced"><span class="form-section-number">B</span><span>Academic &amp; financial profile</span><i></i></div>
+                        <div class="input-row triple">
+                            <div class="field-group">
+                                <label for="cgpa">Current CGPA <span>*</span></label>
+                                <div class="input-with-suffix"><input type="number" id="cgpa" name="cgpa" step="0.01" min="0" max="10" placeholder="0.00" required><span>/ 10</span></div>
+                            </div>
+                            <div class="field-group">
+                                <label for="attendance">Attendance <span>*</span></label>
+                                <div class="input-with-suffix"><input type="number" id="attendance" name="attendance" step="0.01" min="0" max="100" placeholder="0" required><span>%</span></div>
+                            </div>
+                            <div class="field-group">
+                                <label for="backlogs">Active backlogs <span>*</span></label>
+                                <input type="number" id="backlogs" name="backlogs" min="0" step="1" value="0" required>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="field-group">
+                                <label for="family_income">Annual family income <span>*</span></label>
+                                <div class="input-with-prefix"><span>₹</span><input type="number" id="family_income" name="family_income" min="0" step="1" placeholder="e.g. 250000" required></div>
+                            </div>
+                            <div class="field-group">
+                                <label for="extracurricular">Extracurricular achievement</label>
+                                <select id="extracurricular" name="extracurricular"><option value="No">No</option><option value="Yes">Yes</option></select>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="field-group">
+                                <label for="first_gen">First-generation learner</label>
+                                <select id="first_gen" name="first_gen"><option value="No">No</option><option value="Yes">Yes</option></select>
+                            </div>
+                            <div class="field-group">
+                                <label for="disability">Disability consideration</label>
+                                <select id="disability" name="disability"><option value="No">No</option><option value="Yes">Yes</option></select>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="field-group">
+                                <label for="category">Category <span>*</span></label>
+                                <select id="category" name="category" required>
+                                    <option value="General">General</option><option value="OBC">OBC</option>
+                                    <option value="SC">SC</option><option value="ST">ST</option>
+                                    <option value="EWS">EWS</option><option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="field-group">
+                                <label for="previous_scholarship">Previous scholarship received</label>
+                                <select id="previous_scholarship" name="previous_scholarship"><option value="No">No</option><option value="Yes">Yes</option></select>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <span><i class="required-dot"></i> Required fields</span>
+                            <button type="submit" class="button button-submit">Run eligibility review <span aria-hidden="true">↗</span></button>
+                        </div>
+                    </form>
+                </article>
+
+                <aside class="workspace-aside">
+                    <article class="panel result-panel">
+                        <div class="panel-heading compact-heading">
+                            <div><span class="panel-kicker">REVIEW ACTIVITY</span><h2>Screening result</h2></div>
+                            <span class="activity-live"><i></i> LIVE</span>
+                        </div>
+                        <div class="result-placeholder">
+                            <span class="result-illustration"><span>✳</span></span>
+                            <strong>Your next decision starts here.</strong>
+                            <p>Complete the student details and run a review to see the eligibility result.</p>
+                        </div>
+                        <div id="log-display" class="console-body" aria-live="polite">Ready when you are. Add an application to get started.</div>
+                    </article>
+
+                    <article class="criteria-card">
+                        <div class="criteria-heading"><span class="criteria-star">✳</span><h3>What we look at</h3></div>
+                        <div class="criteria-row"><span>Academic performance</span><strong>CGPA 7.0+</strong></div>
+                        <div class="criteria-row"><span>Class attendance</span><strong>75%+</strong></div>
+                        <div class="criteria-row"><span>Annual household income</span><strong>Up to ₹5L</strong></div>
+                        <div class="criteria-row"><span>Active backlogs</span><strong>1 or fewer</strong></div>
+                        <div class="criteria-row"><span>Conditional CGPA range</span><strong>6.75 to &lt; 7.00</strong></div>
+                        <p class="criteria-footnote"><span>i</span> Results are guidance based on the criteria shown.</p>
+                    </article>
+                </aside>
+            </section>
+
+            <section class="panel registry-panel">
+                <div class="registry-heading">
+                    <div><span class="panel-kicker">APPLICATION OVERVIEW</span><h2>Student registry</h2><p>All reviewed applications, in one place.</p></div>
+                    <div class="registry-actions">
+                        <button class="filter-btn active" data-filter="all">All students</button>
+                        <button class="filter-btn" data-filter="Highly Eligible">High merit</button>
+                        <button class="filter-btn" data-filter="Eligible">Eligible</button>
+                        <button class="filter-btn" data-filter="Conditionally Eligible">Conditional</button>
+                        <button class="filter-btn" data-filter="Not Eligible">Not eligible</button>
+                        <button class="button button-rank" id="rank-button"><span aria-hidden="true">↕</span> Rank eligible</button>
+                        <a class="button button-rank report-link" href="/report">Download report <span aria-hidden="true">↓</span></a>
+                    </div>
+                </div>
+                <div class="registry-tools">
+                    <label class="sr-only" for="student-search">Search applications</label>
+                    <input type="search" id="student-search" placeholder="Search by student name or ID">
+                    <div class="summary-chips" aria-label="Classification summary">
+                        <span>Highly eligible <b id="summary-highly">0</b></span>
+                        <span>Eligible <b id="summary-eligible">0</b></span>
+                        <span>Conditional <b id="summary-conditional">0</b></span>
+                        <span>Not eligible <b id="summary-not">0</b></span>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="elegant-table">
+                        <thead><tr><th>STUDENT</th><th>PROGRAMME</th><th>CATEGORY</th><th>CGPA</th><th>ATTENDANCE</th><th>FAMILY INCOME</th><th>BACKLOGS</th><th>PREVIOUS AWARD</th><th>MERIT SCORE</th><th>ELIGIBILITY</th></tr></thead>
+                        <tbody id="student-table-body"></tbody>
+                    </table>
+                </div>
+                <div class="registry-foot"><span><i></i> Registry updates automatically after each review</span><span id="registry-count">— records</span></div>
+            </section>
+            <footer class="workspace-footer"><span>edugrant<span class="footer-dot">.</span></span><span>Thoughtful reviews. Brighter possibilities.</span><button onclick="closeScreeningDashboard()">Return to home ↑</button></footer>
+        </main>
+    </div>
+    <script>
+        function openScreeningDashboard() {
+            document.getElementById("landing-hero").classList.add("hidden");
+            document.getElementById("screener-core").classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+        function closeScreeningDashboard() {
+            document.getElementById("screener-core").classList.add("hidden");
+            document.getElementById("landing-hero").classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+    <script id="screening-data" type="application/json">__SCREENING_DATA__</script>
+    <script>window.openWorkspaceOnLoad = __WORKSPACE_OPEN__;</script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
